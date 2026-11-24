@@ -1,5 +1,5 @@
 ================================================================================
-  RateAlign (Windows x64) - Version 0.3.5
+  RateAlign (Windows x64) - Version 0.4.0
 ================================================================================
   Author  : Pratama Putra
   GitHub  : https://github.com/pratama1246/AMWin-LosslessSwitcher

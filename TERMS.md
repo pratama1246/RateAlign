@@ -1,6 +1,6 @@
 # RateAlign usage information
 
-Applies to v0.3.5. Updated 6 November 2026.
+Applies to v0.4.0. Updated 6 November 2026.
 
 ## License
 

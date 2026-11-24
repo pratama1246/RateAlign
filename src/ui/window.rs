@@ -1481,8 +1481,8 @@ unsafe fn update_status_display() {
                     if state.last_notified_fmt.is_some() {
                         let note_msg = if !status.is_lossless {
                             format!("Output: {} (AAC Lossy)", cur_fmt.display_str())
-                        } else if status.status_message.contains("(Clamped)") {
-                            format!("Output: {} (Clamped)", cur_fmt.display_str())
+                        } else if status.status_message.contains("(Limited by device)") {
+                            format!("Output: {} (Limited by device)", cur_fmt.display_str())
                         } else {
                             format!("Output: {}", cur_fmt.display_str())
                         };

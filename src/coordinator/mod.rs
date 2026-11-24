@@ -498,7 +498,7 @@ impl Coordinator {
                                     if !is_lossless {
                                         st.status_message = format!("Synchronized: {} (AAC Lossy)", applied.display_str());
                                     } else if is_clamped {
-                                        st.status_message = format!("Synchronized: {} (Clamped)", applied.display_str());
+                                        st.status_message = format!("Synchronized: {} (Limited by device)", applied.display_str());
                                     } else {
                                         st.status_message = format!("Synchronized: {}", applied.display_str());
                                     }
@@ -534,7 +534,7 @@ impl Coordinator {
                                 if !is_lossless {
                                     st.status_message = format!("Synchronized: {} (AAC Lossy)", disp_fmt.display_str());
                                 } else if is_cur_clamped {
-                                    st.status_message = format!("Synchronized: {} (Clamped)", disp_fmt.display_str());
+                                    st.status_message = format!("Synchronized: {} (Limited by device)", disp_fmt.display_str());
                                 } else {
                                     st.status_message = format!("Synchronized: {}", disp_fmt.display_str());
                                 }

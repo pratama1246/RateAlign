@@ -12,7 +12,7 @@ pub fn summary(status: &CoordinatorStatus) -> (String, &'static str, u32) {
     if status.is_syncing || message.starts_with("Retrying") {
         return (output, "Switching…", 0x000080A0);
     }
-    if message.contains("(Clamped)") {
+    if message.contains("(Limited by device)") {
         let format = match (status.target_format, status.current_device_format) {
             (Some(source), Some(applied)) if source.sample_rate != applied.sample_rate => format!("{} → {}", source.sample_rate as f64 / 1000.0, applied.display_str()),
             _ => output,
@@ -40,7 +40,7 @@ mod tests {
             current_track: Some(TrackInfo { title: "Test".into(), artist: "Artist".into(), album: "Album".into(), duration_secs: None, smtc_artwork_bytes: None }),
             current_device_format: Some(AudioFormat::new(96000, 24)),
             target_format: Some(AudioFormat::new(192000, 24)),
-            artwork_bytes: None, status_message: "Synchronized: 96 kHz (Clamped)".into(),
+            artwork_bytes: None, status_message: "Synchronized: 96 kHz (Limited by device)".into(),
             is_syncing: false, is_lossless: true, mode: SwitcherMode::Seamless, settling_delay_ms: 300,
         };
         assert_eq!(summary(&s).1, "Limited by device");

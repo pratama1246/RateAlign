@@ -1,6 +1,6 @@
 # RateAlign privacy notice
 
-Version 0.3.5. Updated 6 November 2026.
+Version 0.4.0. Updated 6 November 2026.
 
 RateAlign is developed by Pratama Putra and currently supports Apple Music for Windows. It is not affiliated with Apple. This notice describes the source in this repository.
 

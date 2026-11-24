@@ -1,10 +1,13 @@
 ; Inno Setup Script for RateAlign
 #define MyAppName "RateAlign"
 #define MyAppShortName "AMWin-LosslessSwitcher"
-#define MyAppVersion "0.3.5"
+#define MyAppVersion "0.4.0"
 #define MyAppPublisher "Pratama Putra"
 #define MyAppURL "https://github.com/pratama1246/AMWin-LosslessSwitcher"
 #define MyAppExeName "RateAlign.exe"
+#ifndef MyAppBuildDir
+  #define MyAppBuildDir "..\target\release"
+#endif
 
 [Setup]
 AppId={{9F5B2F17-8D2A-4D3C-B974-91E3618D3C89}
@@ -50,7 +53,7 @@ Type: filesandordirs; Name: "{localappdata}\LosslessSwitcher-AM"
 Type: filesandordirs; Name: "{localappdata}\AMWin-LosslessSwitcher"
 
 [Files]
-Source: "..\target\release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyAppBuildDir}\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\assets\app.ico"; DestDir: "{app}"; Flags: ignoreversion
 Source: "README.txt"; DestDir: "{app}"; Flags: ignoreversion isreadme
 Source: "..\LICENSE"; DestDir: "{app}"; Flags: ignoreversion

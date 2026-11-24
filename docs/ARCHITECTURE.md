@@ -1,6 +1,6 @@
 # RateAlign architecture
 
-Applies to v0.3.5. The application uses Rust, Win32 controls, and GDI/GDI+ rendering. It does not host a web UI.
+Applies to v0.4.0. The application uses Rust, Win32 controls, and GDI/GDI+ rendering. It does not host a web UI.
 
 ## Code map
 
@@ -48,7 +48,7 @@ Mini mode reuses the same window, metadata controls, artwork, coordinator and ti
 
 Main-view rectangles are stored in 96-DPI units. apply_dpi rebuilds fonts and artwork; layout_mini then applies compact geometry where required. Mini artwork is rendered at 56 logical units, compared with 112 in the main view. Width-aware ellipsis keeps long metadata inside its allotted area. The mini format tooltip includes source, output and the full coordinator status.
 
-mini::summary is presentation-only. Errors and switching take precedence over completed results. A coordinator status containing (Clamped) becomes Limited by device. Format matched requires a synchronized lossless result with equal source and endpoint formats. Intentional depth differences use Rate synchronized. Physical format support remains the audio layer's responsibility.
+mini::summary is presentation-only. Errors and switching take precedence over completed results. A coordinator status containing (Limited by device) becomes Limited by device. Format matched requires a synchronized lossless result with equal source and endpoint formats. Intentional depth differences use Rate synchronized. Physical format support remains the audio layer's responsibility.
 
 ## Resource lifetime
 
